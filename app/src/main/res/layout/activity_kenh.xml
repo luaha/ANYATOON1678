@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Ảnh nền -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/anhnencactrang"
+        android:scaleType="centerCrop"
+        android:alpha="0.5"/>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Kênh với nút tìm kiếm -->
+        <LinearLayout
+            android:id="@+id/kenh_timkiem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF6699"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Kênh"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/buttontimkiem"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/nuttimkiem" />
+        </LinearLayout>
+
+        <!-- Nội dung cuộn của bạn -->
+        <ScrollView
+            android:id="@+id/noidung_cuon"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:layout_below="@id/kenh_timkiem">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <GridLayout
+                    android:id="@+id/cacnut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:columnCount="3"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <Button
+                        android:id="@+id/buttonToanbo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/custom_button_kenh"
+                        android:text="Toàn bộ"
+                        android:textColor="#EA3380"
+                        android:textSize="14sp"
+                        android:padding="16dp"
+                        android:minHeight="48dp" />
+
+                    <Button
+                        android:id="@+id/buttonNucuong"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/custom_button_kenh"
+                        android:text="Nữ cường"
+                        android:textColor="#EA3380"
+                        android:textSize="14sp"
+                        android:padding="16dp"
+                        android:minHeight="48dp" />
+
+                    <Button
+                        android:id="@+id/buttonKinhdi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/custom_button_kenh"
+                        android:text="Kinh dị"
+                        android:textColor="#EA3380"
+                        android:textSize="14sp"
+                        android:padding="16dp"
+                        android:minHeight="48dp" />
+
+
+                    <Button
+                        android:id="@+id/buttonHuyenhuyen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_columnWeight="1"
+                        android:background="@drawable/custom_button_kenh"
+                        android:text="Huyền huyễn"
+                        android:textColor="#EA3380"
+                        android:textSize="14sp" />
+
+                    <!-- Thêm các nút thể loại khác ở đây -->
+
+                </GridLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerHTtruyen"
+                    android:layout_width="384dp"
+                    android:layout_height="405dp"
+                    android:layout_below="@id/cacnut"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:background="#FF6699"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <!-- Bottom Navigation Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/noidung_cuon"
+            android:layout_gravity="bottom"
+            android:background="#FF6699"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/Home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/imageViewHome"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/iconhome" />
+
+                <TextView
+                    android:id="@+id/textViewHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Home"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Kenh"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/imageViewKenh"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/truyentranh" />
+
+                <TextView
+                    android:id="@+id/textViewKenh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Kênh"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Canhan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/imageViewCanhan"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/iconcanhan" />
+
+                <TextView
+                    android:id="@+id/textViewCanhan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Cá nhân"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

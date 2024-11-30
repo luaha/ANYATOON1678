@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/bookCover"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:background="@drawable/custom_biatruyen"
+        android:contentDescription="Book Cover"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/bookTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Book Title"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#F6F6F6"
+        android:gravity="center"/>
+</LinearLayout>

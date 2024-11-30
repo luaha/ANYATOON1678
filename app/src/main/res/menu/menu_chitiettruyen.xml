@@ -1,0 +1,12 @@
+<!-- res/menu/menu_con.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_download"
+        android:title="Tải xuống" />
+    <item
+        android:id="@+id/action_follow"
+        android:title="Lưu" />
+    <item
+        android:id="@+id/action_unfollow"
+        android:title="Hủy lưu" />
+</menu>

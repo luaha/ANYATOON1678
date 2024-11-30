@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- Ảnh bìa sách -->
+    <ImageView
+        android:id="@+id/bookCoverImageView"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:background="@drawable/custom_biatruyen"
+        android:src="@drawable/anhbiatruyentamthoi" />
+
+    <!-- Thông tin sách -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <!-- Tên sách -->
+        <TextView
+            android:id="@+id/bookTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên Sách"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#F6F6F6"/>
+
+        <!-- Thể loại sách -->
+        <TextView
+            android:id="@+id/bookGenreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thể loại"
+            android:textSize="14sp"
+            android:textColor="#F6F6F6"
+            android:layout_marginTop="4dp" />
+
+        <!-- Tình trạng sách -->
+        <TextView
+            android:id="@+id/bookStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tình trạng"
+            android:textSize="14sp"
+            android:textColor="#F6F6F6"
+            android:layout_marginTop="4dp" />
+
+        <!-- Tác giả và Số lượt thích / Độ hot -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="60dp">
+
+            <!-- Tác giả -->
+            <TextView
+                android:id="@+id/bookAuthorTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tác giả"
+                android:textColor="#F6F6F6"
+                android:textSize="14sp" />
+
+            <!-- Số lượt thích -->
+            <TextView
+                android:id="@+id/bookLikesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Likes: 100"
+                android:textSize="14sp"
+                android:textColor="#F6F6F6"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Độ hot -->
+            <TextView
+                android:id="@+id/bookPopularityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hot: 200"
+                android:textColor="#F6F6F6"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
